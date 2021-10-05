@@ -63,6 +63,13 @@ input[type=submit] {
     margin-top: 6px;
 }
 
+.error {
+    border-radius: 9px;
+    background-color: lightpink;
+    color: red;
+    padding: 30px;
+}
+
 /* Clear floats after the columns */
 
 .row:after {
