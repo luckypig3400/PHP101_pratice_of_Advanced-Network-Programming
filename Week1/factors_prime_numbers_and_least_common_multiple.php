@@ -168,11 +168,18 @@
                     }
                 }
 
-                echo "<br><br>AB兩數重複的質因數有:";
-                foreach ($ab_same_prime_factors as $abpf) {
-                    echo "$abpf ";
+                //求最小公倍數
+                $LCM_of_a_b = 1; //least common multiple
+                foreach ($ab_same_prime_factors as $abspf) {
+                    $LCM_of_a_b *= $abspf;
                 }
-
+                foreach ($a_prime_factors as $apf) {
+                    $LCM_of_a_b *= $apf;
+                }
+                foreach ($b_prime_factors as $bpf) {
+                    $LCM_of_a_b *= $bpf;
+                }
+                echo "<br><br>$a 與 $b 的最小公倍數(LCM):$LCM_of_a_b";
 
                 echo "</div></div>";
             }
