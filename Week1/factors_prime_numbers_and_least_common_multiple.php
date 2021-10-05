@@ -114,7 +114,7 @@
                         if ($a % $i == 0) {
                             array_push($a_prime_factors, $i);
                             $a = $a / $i;
-                            $i = 2; //a可能可再次被2整除
+                            $i = 1; //a可能可再次被2整除(for迴圈會+1)
                         }
                     } else {
                         array_push($a_prime_factors, $a);
