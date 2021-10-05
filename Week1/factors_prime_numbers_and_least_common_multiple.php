@@ -160,6 +160,10 @@
                             $b_prime_factors = array_values($b_prime_factors); //reset index
                             //刪除完陣列元素後要記得重整index
                             //https://stackoverflow.com/questions/7536961/reset-php-array-index/7536963
+
+                            //因為index重整，從頭開始找
+                            $ap = 0;
+                            $bp = 0;
                         }
                     }
                 }
