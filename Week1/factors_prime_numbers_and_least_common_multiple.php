@@ -20,7 +20,7 @@
                     <label for="numA">請輸入大於0的數字(A)：</label>
                 </div>
                 <div class="col-75">
-                    <input type="number" id="numA" name="numberA" placeholder="69">
+                    <input type="number" id="numA" name="numberA" value="69">
                 </div>
             </div>
             <div class="row">
@@ -28,7 +28,7 @@
                     <label for="numB">請輸入大於0的數字(B)：</label>
                 </div>
                 <div class="col-75">
-                    <input type="number" id="numB" name="numberB" placeholder="54">
+                    <input type="number" id="numB" name="numberB" value="54">
                 </div>
             </div>
             <div class="row">
@@ -54,7 +54,42 @@
                 echo "<div class=\"row\"><div class=\"error\">有數字尚未輸入，請檢查!</div></div>";
             } else if ((int)$a <= 0 || (int)$b <= 0) {
                 echo "<div class=\"row\"><div class=\"error\">輸入的數字小於或等於0 請改為輸入大於的數字喔!</div></div>";
-            } else echo "接收到的數字A:$a , 數字B:$b";
+            } else {
+                echo "<div class=\"row\"><div class=\"info\">接收到的數字A:$a , 數字B:$b</div></div>";
+                echo "<br><div class=\"row\"><div class=\"info\">";
+
+                //以下進行因數運算
+                $a_factors = array(1);
+                $b_factors = array(1);
+                for ($i = 2; $i <= ($a / 2); $i++) {
+                    if ($a % $i == 0) {
+                        array_push($a_factors, $i);
+                    }
+                }
+                array_push($a_factors, $a);//自己也是因數
+                for ($i = 2; $i <= ($b / 2); $i++) {
+                    if ($b % $i == 0) {
+                        array_push($b_factors, $i);
+                    }
+                }
+                array_push($b_factors, $b);
+
+                if (sizeof($a_factors) == 2) {
+                    echo "$a 是質數 因數有:";
+                } else echo "$a 是合數 因數有:";
+                foreach ($a_factors as $factor) {
+                    echo "$factor ";
+                }
+
+                if (sizeof($b_factors) == 2) {
+                    echo "<br>$b 是質數 因數有:";
+                } else echo "<br>$b 是合數 因數有:";
+                foreach ($b_factors as $owo) {
+                    echo "$owo ";
+                }
+
+                echo "</div></div>";
+            }
         }
         ?>
 

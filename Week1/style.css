@@ -70,6 +70,12 @@ input[type=submit] {
     padding: 30px;
 }
 
+.info{
+    border-radius: 6px;
+    background-color: lightskyblue;
+    padding: 30px;
+}
+
 /* Clear floats after the columns */
 
 .row:after {
