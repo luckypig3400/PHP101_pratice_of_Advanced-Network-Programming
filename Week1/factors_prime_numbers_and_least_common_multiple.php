@@ -146,6 +146,29 @@
                     echo "$bpf ";
                 }
 
+                //篩選出兩數重複的質因數
+                $ab_same_prime_factors = array();
+                for ($ap = 0; $ap < sizeof($a_prime_factors); $ap++) {
+                    for ($bp = 0; $bp < sizeof($b_prime_factors); $bp++) {
+                        if ($a_prime_factors[$ap] == $b_prime_factors[$bp]) {
+                            array_push($ab_same_prime_factors, $a_prime_factors[$ap]);
+                            unset($a_prime_factors[$ap]);
+                            unset($b_prime_factors[$bp]);
+                            //del array element:https://stackoverflow.com/questions/369602/deleting-an-element-from-an-array-in-php
+
+                            $a_prime_factors = array_values($a_prime_factors); //reset index
+                            $b_prime_factors = array_values($b_prime_factors); //reset index
+                            //刪除完陣列元素後要記得重整index
+                            //https://stackoverflow.com/questions/7536961/reset-php-array-index/7536963
+                        }
+                    }
+                }
+
+                echo "<br><br>AB兩數重複的質因數有:";
+                foreach ($ab_same_prime_factors as $abpf) {
+                    echo "$abpf ";
+                }
+
 
                 echo "</div></div>";
             }
