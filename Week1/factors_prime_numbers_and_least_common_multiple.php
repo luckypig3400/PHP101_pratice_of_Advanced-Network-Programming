@@ -66,7 +66,7 @@
                         array_push($a_factors, $i);
                     }
                 }
-                array_push($a_factors, $a);//自己也是因數
+                array_push($a_factors, $a); //自己也是因數
                 for ($i = 2; $i <= ($b / 2); $i++) {
                     if ($b % $i == 0) {
                         array_push($b_factors, $i);
@@ -87,6 +87,24 @@
                 foreach ($b_factors as $owo) {
                     echo "$owo ";
                 }
+
+                //A、B兩數公因數與互質判斷
+                $ab_factors = array();
+                foreach ($a_factors as $af) {
+                    foreach ($b_factors as $bf) {
+                        if ($af == $bf) array_push($ab_factors, $af);
+                    }
+                }
+
+                if (sizeof($ab_factors) == 1) {
+                    echo "<br>$a 與 $b 兩數互質 他們的公因數只有1";
+                } else {
+                    echo "<br>$a 與 $b 兩數不互質 他們的公因數有:";
+                    foreach ($ab_factors as $f) {
+                        echo "$f ";
+                    }
+                }
+
 
                 echo "</div></div>";
             }
