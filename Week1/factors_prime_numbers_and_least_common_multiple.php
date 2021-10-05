@@ -107,7 +107,7 @@
 
                 //最小公倍數 https://www.idomaths.com/zh-Hant/hcflcm.php
                 $a_prime_factors = array();
-                //做質因數分解
+                //把數字A做質因數分解
                 $a_copy = $a;
                 for ($i = 2; $i <= $a; $i++) {
                     if ($i != $a) { // a還沒被分解到不能再分解
@@ -121,9 +121,29 @@
                     }
                 }
                 $a = $a_copy;
-                echo "<br>$a 的質因數分解結果:";
+                echo "<br><br>$a 的質因數分解結果:";
                 foreach ($a_prime_factors as $apf) {
                     echo "$apf ";
+                }
+
+                //把數字B做質因數分解
+                $b_prime_factors = array();
+                $b_copy = $b;
+                for ($i = 2; $i <= $b; $i++) {
+                    if ($i != $b) { // b還沒被分解到不能再分解
+                        if ($b % $i == 0) {
+                            array_push($b_prime_factors, $i);
+                            $b = $b / $i;
+                            $i = 1; //b可能可再次被2整除(for迴圈會+1)
+                        }
+                    } else {
+                        array_push($b_prime_factors, $b);
+                    }
+                }
+                $b = $b_copy;
+                echo "<br>$b 的質因數分解結果:";
+                foreach ($b_prime_factors as $bpf) {
+                    echo "$bpf ";
                 }
 
 
