@@ -13,7 +13,7 @@
     <div class="container">
         <form action="./factors_prime_numbers_and_least_common_multiple.php">
             <div class="row">
-                本程式會自動計算A、B兩數的各自的因數、最大公因數、最小公倍數
+                <h3>本程式會自動計算A、B兩數的各自的因數、最大公因數、最小公倍數</h3>
             </div>
             <div class="row">
                 <div class="col-25">
@@ -32,6 +32,7 @@
                 </div>
             </div>
             <div class="row">
+                <br>
                 <input type="submit" value="開始計算">
             </div>
         </form>
