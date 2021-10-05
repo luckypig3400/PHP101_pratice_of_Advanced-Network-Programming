@@ -105,6 +105,27 @@
                     }
                 }
 
+                //最小公倍數 https://www.idomaths.com/zh-Hant/hcflcm.php
+                $a_prime_factors = array();
+                //做質因數分解
+                $a_copy = $a;
+                for ($i = 2; $i <= $a; $i++) {
+                    if ($i != $a) { // a還沒被分解到不能再分解
+                        if ($a % $i == 0) {
+                            array_push($a_prime_factors, $i);
+                            $a = $a / $i;
+                            $i = 2; //a可能可再次被2整除
+                        }
+                    } else {
+                        array_push($a_prime_factors, $a);
+                    }
+                }
+                $a = $a_copy;
+                echo "<br>$a 的質因數分解結果:";
+                foreach ($a_prime_factors as $apf) {
+                    echo "$apf ";
+                }
+
 
                 echo "</div></div>";
             }
