@@ -45,6 +45,18 @@ $_SESSION["SessionName"] = "test"; //讀取或寫入Session
             echo "Counter(Personal):" . $_SESSION["counter"];
             ?>
         </div>
+
+        <div class="row">
+            <h3>Session Counter(所有人共用)</h3>
+            <form action="./session_test_public.php">
+                <div class="col-75">
+                    因為要設定Session ID 需在一個頁面啟動Session前去做設定，所以寫在新頁面
+                </div>
+                <div class="col-25">
+                    <input type="submit" value="點我前往">
+                </div>
+            </form>
+        </div>
     </div>
 </body>
 
