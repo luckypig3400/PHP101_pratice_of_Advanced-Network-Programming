@@ -39,6 +39,17 @@
                 </div>
             </form>
         </div>
+        <br><br><br>
+        <div class="row">
+            <div class="col-50">
+                <h3>Week2 Session Playground</h3>
+            </div>
+            <form action="./Week2_Session/session_test.php">
+                <div class="col-50">
+                    <input type="submit" value="點我前往">
+                </div>
+            </form>
+        </div>
 
     </div>
 </body>
