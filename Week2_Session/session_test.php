@@ -57,6 +57,13 @@ $_SESSION["SessionName"] = "test"; //讀取或寫入Session
                 </div>
             </form>
         </div>
+
+        <div class="row">
+            <br><br><br>
+            <form action="../index.php">
+                <input type="submit" value="回首頁">
+            </form>
+        </div>
     </div>
 </body>
 

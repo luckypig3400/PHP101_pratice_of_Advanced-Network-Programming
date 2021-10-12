@@ -186,6 +186,13 @@
         }
         ?>
 
+
+        <div class="row">
+            <br><br><br>
+            <form action="../index.php">
+                <input type="submit" value="回首頁">
+            </form>
+        </div>
     </div>
 </body>
 
