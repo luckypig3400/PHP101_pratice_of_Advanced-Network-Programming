@@ -1,7 +1,7 @@
 <?php
 $acc = isset($_COOKIE["account"]) ? $_COOKIE["account"] : "";
 if ($acc != "") {
-    //讀取已紀錄的登入時間與IP
+    //stay at this page
 } else {
     header("Location:login.php");
 }
@@ -35,6 +35,19 @@ if ($acc != "") {
                 <div class="col-25">
                     <input type="submit" value="登出">
                 </div>
+            </div>
+            <div class="row">
+                <h3>您於本裝置上登入任何帳號的歷史紀錄</h3>
+                <?php
+                //讀取已紀錄的登入時間與IP
+                for ($i = 4; $i >= 0; $i--) { //Up to 5 records
+                    $current = "record" . $i;
+
+                    if (isset($_COOKIE["$current"])) { //check if record empty
+                        echo $_COOKIE["$current"] . "<br>";
+                    }
+                }
+                ?>
             </div>
         </form>
 
