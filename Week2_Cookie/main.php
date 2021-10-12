@@ -1,3 +1,12 @@
+<?php
+$acc = isset($_COOKIE["useraccount"]) ? $_COOKIE["useraccount"] : "";
+if ($acc != "") {
+    //do nothing
+} else {
+    header("Location:login.php");
+}
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -5,28 +14,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login--Cookie Ver</title>
+    <title>Welcome</title>
     <link rel="stylesheet" href="../general_style.css">
 </head>
 
 <body>
     <div class="container">
         <div class="row">
-            <h1>Login--Cookie Ver</h1>
+            <h1>Welcome</h1>
         </div>
-        <form action="./main.php" method="POST">
+
+        <form action="./logout.php" method="post">
             <div class="row">
-                <div class="col-25">
-                    <label for="acc">請輸入帳號:</label>
+                <div class="col-75">
+                    <?php
+                    echo "Welcom ";
+                    ?>
                 </div>
-                <div class="col-50">
-                    <input type="text" name="account" id="acc" placeholder="Your Account">
-                </div>
                 <div class="col-25">
-                    <input type="submit" value="登入">
+                    <input type="submit" value="登出">
                 </div>
             </div>
         </form>
+
     </div>
 </body>
 
