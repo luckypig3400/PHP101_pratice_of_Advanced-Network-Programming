@@ -2,7 +2,6 @@
 $acc = isset($_COOKIE["account"]) ? $_COOKIE["account"] : "";
 if ($acc != "") {
     //讀取已紀錄的登入時間與IP
-
 } else {
     header("Location:login.php");
 }
@@ -30,6 +29,7 @@ if ($acc != "") {
                 <div class="col-75">
                     <?php
                     echo "Welcom " . $acc;
+                    echo "<br>您此次的登入IP:" . $_SERVER["REMOTE_ADDR"];
                     ?>
                 </div>
                 <div class="col-25">
