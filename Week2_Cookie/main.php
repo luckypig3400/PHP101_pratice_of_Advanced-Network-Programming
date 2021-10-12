@@ -1,7 +1,8 @@
 <?php
-$acc = isset($_COOKIE["useraccount"]) ? $_COOKIE["useraccount"] : "";
+$acc = isset($_COOKIE["account"]) ? $_COOKIE["account"] : "";
 if ($acc != "") {
-    //do nothing
+    //讀取已紀錄的登入時間與IP
+
 } else {
     header("Location:login.php");
 }
@@ -28,7 +29,7 @@ if ($acc != "") {
             <div class="row">
                 <div class="col-75">
                     <?php
-                    echo "Welcom ";
+                    echo "Welcom " . $acc;
                     ?>
                 </div>
                 <div class="col-25">

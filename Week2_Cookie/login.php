@@ -14,7 +14,7 @@
         <div class="row">
             <h1>Login--Cookie Ver</h1>
         </div>
-        <form action="./main.php" method="POST">
+        <form action="./cookie_register.php" method="POST">
             <div class="row">
                 <div class="col-25">
                     <label for="acc">請輸入帳號:</label>
