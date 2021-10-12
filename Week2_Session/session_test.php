@@ -32,6 +32,19 @@ $_SESSION["SessionName"] = "test"; //讀取或寫入Session
             echo "<br>SessionName刪除後的值:" . $_SESSION["SessionName"];
             ?>
         </div>
+
+        <div class="row">
+            <h3>Session Counter(每個使用者獨自擁有)</h3>
+            <?php
+            if (!isset($_SESSION["counter"]))
+                $_SESSION["counter"] = 1;
+            else
+                $_SESSION["counter"]++;
+
+            echo "Session ID:" . session_id() . "<br>";
+            echo "Counter(Personal):" . $_SESSION["counter"];
+            ?>
+        </div>
     </div>
 </body>
 
