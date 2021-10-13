@@ -34,6 +34,17 @@ session_start();
         </div>
 
         <div class="row">
+            <form action="./destroy_session.php">
+                <div class="col-50">
+                    <h3>刪除所有Session</h3>
+                </div>
+                <div class="col-50">
+                    <input type="submit" value="刪除Session">
+                </div>
+            </form>
+        </div>
+
+        <div class="row">
             <br><br><br>
             <form action="../index.php">
                 <input type="submit" value="回首頁">
