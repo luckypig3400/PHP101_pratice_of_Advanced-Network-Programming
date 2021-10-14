@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login--Cookie Ver</title>
     <link rel="stylesheet" href="../general_style.css">
+    <script src="./js/week3_input_limiter.js"></script>
+    <!-- https://www.w3schools.com/js/js_whereto.asp -->
 </head>
 
 <body>
@@ -14,7 +16,7 @@
         <div class="row">
             <h1>Login--Cookie Ver</h1>
         </div>
-        <form action="./cookie_register.php" method="POST">
+        <form action="./cookie_register.php" method="POST" name="loginForm" onsubmit="return validateForm()">
             <div class="row">
                 <div class="col-25">
                     <label for="acc">請輸入帳號:</label>
