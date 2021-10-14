@@ -16,7 +16,7 @@
         <div class="row">
             <h1>Login--Cookie Ver</h1>
         </div>
-        <form action="./cookie_register.php" method="POST" name="loginForm" onsubmit="return validateForm()">
+        <form action="./cookie_register.php" method="POST" id="lf" name="loginForm" onsubmit="validateForm();">
             <div class="row">
                 <div class="col-25">
                     <label for="acc">請輸入帳號:</label>
