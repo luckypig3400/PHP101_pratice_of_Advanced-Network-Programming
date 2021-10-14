@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login--Cookie Ver</title>
     <link rel="stylesheet" href="../general_style.css">
-    <script src="./js/week3_input_limiter.js"></script>
+    <script src="./js_and_css/week3_input_limiter.js"></script>
     <!-- https://www.w3schools.com/js/js_whereto.asp -->
 </head>
 

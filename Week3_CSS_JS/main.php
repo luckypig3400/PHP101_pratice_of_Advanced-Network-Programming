@@ -16,6 +16,7 @@ if ($acc != "") {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome</title>
     <link rel="stylesheet" href="../general_style.css">
+    <link rel="stylesheet" href="./js_and_css/bigTable.css">
 </head>
 
 <body>
@@ -50,6 +51,26 @@ if ($acc != "") {
                 ?>
             </div>
         </form>
+
+        <div class="row">
+            <div class="big-font">
+                <br>大字體<br><br><br>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>標題一</th>
+                        <th>標題二</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td scope="row">WoW</td>
+                        <td>酷耶</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
 
     </div>
 </body>

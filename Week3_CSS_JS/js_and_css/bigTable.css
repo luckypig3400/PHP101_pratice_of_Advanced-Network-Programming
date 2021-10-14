@@ -1,0 +1,20 @@
+.big-font {
+    font-size: 100px;
+    font-family: DFKai-sb;
+    /* https://www.wibibi.com/info.php?tid=CSS_font-family_%E6%A8%99%E6%A5%B7%E9%AB%94 */
+    line-height: 30px;
+    /* http://www.flycan.com/article/css/css-tex-429.html */
+}
+
+/* Table css style setting REF: */
+/* https://www.w3schools.com/css/css_table.asp */
+
+table {
+    width: 80%;
+    border: 3px solid black;
+}
+
+td, th {
+    height: 100px;
+    border: 1px solid black;
+}
