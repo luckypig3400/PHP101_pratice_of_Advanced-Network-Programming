@@ -22,7 +22,9 @@
                     <label for="acc">請輸入帳號:</label>
                 </div>
                 <div class="col-50">
-                    <input type="text" name="account" id="acc" placeholder="Your Account">
+                    <input type="text" name="account" id="acc" placeholder="Your Account" maxlength="10" minlength="4">
+                    <!-- https://www.w3schools.com/tags/att_input_minlength.asp -->
+                    <!-- https://www.w3schools.com/tags/att_input_maxlength.asp -->
                 </div>
                 <div class="col-25">
                     <input type="submit" value="登入">
