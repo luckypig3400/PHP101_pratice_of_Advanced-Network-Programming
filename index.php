@@ -50,6 +50,17 @@
                 </div>
             </form>
         </div>
+        <br><br><br>
+        <div class="row">
+            <div class="col-50">
+                <h3>Week3 CSS & Javascript Practice</h3>
+            </div>
+            <form action="./Week3_CSS_JS/login.php">
+                <div class="col-50">
+                    <input type="submit" value="點我前往">
+                </div>
+            </form>
+        </div>
 
     </div>
 </body>
