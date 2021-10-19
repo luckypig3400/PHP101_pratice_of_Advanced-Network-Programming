@@ -76,6 +76,11 @@
                     <input type="submit" value="老師提供V2舊版範例">
                 </div>
             </form>
+            <form action="./Week3_Maps/openStreetMap.html">
+                <div class="col-25">
+                    <input type="submit" value="老師提供Open Street Map範例">
+                </div>
+            </form>
         </div>
 
     </div>

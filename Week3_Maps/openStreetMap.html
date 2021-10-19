@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Simple Map</title>
+        <meta name="viewport" content="initial-scale=1.0">
+        <meta charset="utf-8">
+        <style>
+            /* Always set the map height explicitly to define the size of the div
+* element that contains the map. */
+            #map {
+                height: 100%;
+            }
+
+            /* Optional: Makes the sample page fill the window. */
+            html,
+            body {
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+        </style>
+    </head>
+
+    <body onload="initialize()">
+        <div id="map"></div>
+        <script src="OpenLayers.js"></script><!-- 此檔案請自行上網搜尋 https://openlayers.org/ -->
+        <script type="text/javascript">
+            function initialize() {
+                MyMap = new OpenLayers.Map("map");
+                MyMap.addLayer(new OpenLayers.Layer.OSM());
+                var lonLat = new OpenLayers.LonLat(150.644, -34.397)
+                    .transform(
+                        new OpenLayers.Projection("EPSG:4326"), // transform from WGS 1984
+                        MyMap.getProjectionObject() // to Spherical Mercator Projection
+                    );
+                var zoom = 6;
+                var markers = new OpenLayers.Layer.Markers("Markers");
+                MyMap.addLayer(markers);
+                markers.addMarker(new OpenLayers.Marker(lonLat));
+                MyMap.setCenter(lonLat, zoom);
+            }
+        </script>
+    </body>
+
+</html>
