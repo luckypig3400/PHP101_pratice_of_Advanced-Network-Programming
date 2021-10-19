@@ -61,6 +61,22 @@
                 </div>
             </form>
         </div>
+        <br><br><br>
+        <div class="row">
+            <div class="col-25">
+                <h3>Week3 Maps Practice</h3>
+            </div>
+            <form action="./Week3_Maps/googleMaps.html">
+                <div class="col-25">
+                    <input type="submit" value="Google官網範例">
+                </div>
+            </form>
+            <form action="./Week3_Maps/googleMaps_old_v2_example.html">
+                <div class="col-25">
+                    <input type="submit" value="老師提供V2舊版範例">
+                </div>
+            </form>
+        </div>
 
     </div>
 </body>
