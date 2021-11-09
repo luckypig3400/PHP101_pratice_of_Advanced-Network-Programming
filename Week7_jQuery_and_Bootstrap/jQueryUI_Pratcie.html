@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>jQuery UI pratice</title>
+
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.13.0/themes/base/jquery-ui.css">
+        <link rel="stylesheet" href="/resources/demos/style.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+        <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+        <script>
+            $(function () {
+                $("#menu").menu();
+            });
+        </script>
+        <style>
+            .ui-menu {
+                width: 150px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <!-- https://jqueryui.com/menu/ -->
+        <ul id="menu">
+            <li class="ui-state-disabled">
+                <div>功能選單</div>
+            </li>
+            <li>
+                <div>選項A</div>
+            </li>
+            <li>
+                <div>知名網站</div>
+                <ul>
+                    <li class="ui-state-disabled">
+                        <div>搜尋引擎清單</div>
+                    </li>
+                    <li>
+                        <div>Google</div>
+                    </li>
+                    <li>
+                        <div>Yahoo</div>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <div>音樂類型</div>
+                <ul>
+                    <li>
+                        <div>Jazz</div>
+                        <ul>
+                            <li>
+                                <div>Freejazz</div>
+                            </li>
+                            <li>
+                                <div>Big Band</div>
+                            </li>
+                            <li>
+                                <div>Modern</div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div>Pop</div>
+                    </li>
+                </ul>
+            </li>
+            <li class="ui-state-disabled">
+                <div>Menu</div>
+            </li>
+        </ul>
+
+    </body>
+
+</html>
