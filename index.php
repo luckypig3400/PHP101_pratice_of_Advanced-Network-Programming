@@ -83,6 +83,16 @@
             </form>
         </div>
 
+        <div class="row">
+            <div class="col-50">
+                <h3>Week7 Quiz(Cookie)</h3>
+            </div>
+            <form action="./20211109_quiz/1.php">
+                <div class="col-50">
+                    <input type="submit" value="點我前往">
+                </div>
+            </form>
+        </div>
     </div>
 </body>
 
