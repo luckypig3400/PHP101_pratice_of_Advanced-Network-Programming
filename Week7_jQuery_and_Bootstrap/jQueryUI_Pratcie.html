@@ -18,10 +18,18 @@
             $(function () {
                 $("#datepicker").datepicker();
             });
+            $(function () {
+                $(document).tooltip();
+            })
         </script>
         <style>
             .ui-menu {
                 width: 150px;
+            }
+
+            label {
+                display: inline-block;
+                width: 5em;
             }
         </style>
         <script>
@@ -41,7 +49,7 @@
     <body align="center">
         <h1>jQuery UI Playground</h1>
 
-        <h3>jQuery UI Menu選單</h3>
+        <h3>jQuery Widgets Menu選單</h3>
         <!-- https://jqueryui.com/menu/ -->
         <ul id="menu">
             <li class="ui-state-disabled">
@@ -91,15 +99,34 @@
             </li>
         </ul>
 
-        <h3>jQuery 日期選單範例</h3>
+        <h3>jQuery Widgets 日期選單範例</h3>
         <!-- https://jqueryui.com/datepicker/ -->
         <p>Date: <input type="text" id="datepicker"></p>
 
-        <h3>jQuery 自動補齊輸入文字</h3>
+        <h3>jQuery Widgets 自動補齊輸入文字</h3>
         <!-- https://jqueryui.com/autocomplete/ -->
         <div class="ui-widget">
             <label for="tags">Tags:</label>
             <input id="tags">
+        </div>
+
+        <h3>jQuery Widgets 懸浮提示</h3>
+        <!-- https://jqueryui.com/tooltip/ -->
+        <div>
+            <p><a href="#" title="That&apos;s what this widget is">Tooltips</a> can be attached to any element. When you
+                hover
+                the element with your mouse, the title attribute is displayed in a little box next to the element, just
+                like a native tooltip.</p>
+            <p>But as it&apos;s not a native tooltip, it can be styled. Any themes built with
+                <a href="http://jqueryui.com/themeroller/"
+                    title="ThemeRoller: jQuery UI&apos;s theme builder application">ThemeRoller</a>
+                will also style tooltips accordingly.
+            </p>
+            <p>Tooltips are also useful for form elements, to show some additional information in the context of each
+                field.</p>
+            <p><label for="age">Your age:</label><input id="age"
+                    title="We ask for your age only for statistical purposes."></p>
+            <p>Hover the field to see the tooltip.</p>
         </div>
 
     </body>
