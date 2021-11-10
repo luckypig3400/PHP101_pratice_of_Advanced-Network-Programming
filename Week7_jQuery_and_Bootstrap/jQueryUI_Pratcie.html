@@ -15,6 +15,9 @@
             $(function () {
                 $("#menu").menu();
             });
+            $(function () {
+                $("#datepicker").datepicker();
+            });
         </script>
         <style>
             .ui-menu {
@@ -23,14 +26,17 @@
         </style>
     </head>
 
-    <body>
+    <body align="center">
+        <h1>jQuery UI Playground</h1>
+
+        <h3>jQuery UI Menu選單</h3>
         <!-- https://jqueryui.com/menu/ -->
         <ul id="menu">
             <li class="ui-state-disabled">
                 <div>功能選單</div>
             </li>
             <li>
-                <div>選項A</div>
+                <div>神奇選單</div>
             </li>
             <li>
                 <div>知名網站</div>
@@ -39,10 +45,10 @@
                         <div>搜尋引擎清單</div>
                     </li>
                     <li>
-                        <div>Google</div>
+                        <div><a href="https://www.google.com/">Google</a></div>
                     </li>
                     <li>
-                        <div>Yahoo</div>
+                        <div><a href="https://tw.yahoo.com/">Yahoo</a></div>
                     </li>
                 </ul>
             </li>
@@ -72,6 +78,10 @@
                 <div>Menu</div>
             </li>
         </ul>
+
+        <h3>jQuery 日期選單範例</h3>
+        <!-- https://jqueryui.com/datepicker/ -->
+        <p>Date: <input type="text" id="datepicker"></p>
 
     </body>
 
