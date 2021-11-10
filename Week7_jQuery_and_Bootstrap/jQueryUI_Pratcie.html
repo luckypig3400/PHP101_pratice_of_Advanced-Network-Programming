@@ -24,6 +24,18 @@
                 width: 150px;
             }
         </style>
+        <script>
+            // https://jqueryui.com/autocomplete/
+            $(function () {
+                var availableTags = ["ActionScript", "AppleScript", "Asp", "BASIC",
+                    "C", "C++", "Clojure", "COBOL", "ColdFusion", "Erlang", "Fortran",
+                    "Groovy", "Haskell", "Java", "JavaScript", "Lisp", "Perl", "PHP", "Python",
+                    "Ruby", "Scala", "Scheme"];
+                $("#tags").autocomplete({
+                    source: availableTags
+                });
+            });
+        </script>
     </head>
 
     <body align="center">
@@ -82,6 +94,13 @@
         <h3>jQuery 日期選單範例</h3>
         <!-- https://jqueryui.com/datepicker/ -->
         <p>Date: <input type="text" id="datepicker"></p>
+
+        <h3>jQuery 自動補齊輸入文字</h3>
+        <!-- https://jqueryui.com/autocomplete/ -->
+        <div class="ui-widget">
+            <label for="tags">Tags:</label>
+            <input id="tags">
+        </div>
 
     </body>
 
