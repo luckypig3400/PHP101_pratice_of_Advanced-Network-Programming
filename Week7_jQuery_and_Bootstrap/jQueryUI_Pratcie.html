@@ -20,7 +20,10 @@
             });
             $(function () {
                 $(document).tooltip();
-            })
+            });
+            $(function(){
+                $("#tabs").tabs();
+            });
         </script>
         <style>
             .ui-menu {
@@ -49,7 +52,7 @@
     <body align="center">
         <h1>jQuery UI Playground</h1>
 
-        <h3>jQuery Widgets Menu選單</h3>
+        <h3>jQuery Widgets Menu(選單)</h3>
         <!-- https://jqueryui.com/menu/ -->
         <ul id="menu">
             <li class="ui-state-disabled">
@@ -99,18 +102,18 @@
             </li>
         </ul>
 
-        <h3>jQuery Widgets 日期選單範例</h3>
+        <h3>jQuery Widgets Datepicker(日期選單範例)</h3>
         <!-- https://jqueryui.com/datepicker/ -->
         <p>Date: <input type="text" id="datepicker"></p>
 
-        <h3>jQuery Widgets 自動補齊輸入文字</h3>
+        <h3>jQuery Widgets Autocomplete(自動補齊輸入文字)</h3>
         <!-- https://jqueryui.com/autocomplete/ -->
         <div class="ui-widget">
             <label for="tags">Tags:</label>
             <input id="tags">
         </div>
 
-        <h3>jQuery Widgets 懸浮提示</h3>
+        <h3>jQuery Widgets Tooltip(懸浮提示)</h3>
         <!-- https://jqueryui.com/tooltip/ -->
         <div>
             <p><a href="#" title="That&apos;s what this widget is">Tooltips</a> can be attached to any element. When you
@@ -122,7 +125,27 @@
             <p>Hover the field to see the tooltip.</p>
         </div>
 
-        <h3>jQuery Widgets 可切換頁籤</h3>
+        <h3>jQuery Widgets Tabs(可切換頁籤)</h3>
+        <!-- https://jqueryui.com/tabs/ -->
+        <div id="tabs">
+            <ul>
+                <li><a href="#tabs-1">頁面1</a></li>
+                <li><a href="#tabs-2">頁面2</a></li>
+                <li><a href="#tabs-3">頁面3</a></li>
+            </ul>
+            <div id="tabs-1">
+                <p>頁面1的內文OwO</p>
+            </div>
+            <div id="tabs-2">
+                <p>頁面2的內文o(*￣▽￣*)ブ</p>
+            </div>
+            <div id="tabs-3">
+                <p>頁面3的內文( •̀ ω •́ )✧</p>
+                <p>沒想到你居然能找到這裡來! <br>你的毅力值得嘉許o((>ω< ))o</p>
+            </div>
+        </div>
+
+        
 
     </body>
 
