@@ -49,14 +49,14 @@
     <!-- https://getbootstrap.com/docs/5.1/components/progress/ -->
     <div class="progress">
         <?php $progressValue = rand(0, 100); ?>
-        <div class="progress-bar bg-danger" role="progressbar" style="width: 
+        <div class="progress-bar bg-danger progress-bar-striped progress-bar-animated" role="progressbar" style="width: 
         <?php if ($progressValue <= 60) echo $progressValue;
         else echo "60"; ?>%"></div>
-        <div class="progress-bar bg-warning" role="progressbar" style="width: 
+        <div class="progress-bar bg-warning progress-bar-striped progress-bar-animated" role="progressbar" style="width: 
             <?php if ($progressValue <= 60) echo "0";
             else if ($progressValue >= 90) echo "30";
             else echo $progressValue - 60; ?>%"></div>
-        <div class="progress-bar bg-success" role="progressbar" style="width:
+        <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" role="progressbar" style="width:
             <?php if ($progressValue >= 90) echo $progressValue - 90; ?>%"></div>
     </div>
     <p>
