@@ -93,6 +93,23 @@
                 </div>
             </form>
         </div>
+
+        <div class="row">
+            <div class="col-50">
+                <h3>Week7 jQuery & Boostrap Practice</h3>
+            </div>
+            <form action="./Week7_jQuery_and_Bootstrap/jQueryUI_Pratcie.html">
+                <div class="col-25">
+                    <input type="submit" value="jQuery">
+                </div>
+            </form>
+            <form action="./Week7_jQuery_and_Bootstrap/bootstrap_practice.php">
+                <div class="col-25">
+                    <input type="submit" value="Bootstrap">
+                </div>
+            </form>
+        </div>
+
     </div>
 </body>
 

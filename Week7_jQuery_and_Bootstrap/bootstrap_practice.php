@@ -22,9 +22,16 @@
         <button type="button" class="btn btn-primary">
             首頁
         </button>
-        <button type="button" class="btn btn-info">
-            通知 <span class="badge bg-secondary">3</span>
-        </button>
+        <a href="https://tw.yahoo.com/?p=us">
+            <button type="button" class="btn btn-info">
+                Yahoo通知
+                <span class="badge bg-secondary">
+                    <?php
+                    echo rand(1,69);
+                    ?>
+                </span>
+            </button>
+        </a>
         <button type="button" class="btn btn-outline-info position-relative">
             廣告
             <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
