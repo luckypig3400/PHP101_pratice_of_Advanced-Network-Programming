@@ -110,6 +110,17 @@
             </form>
         </div>
 
+        <div class="row">
+            <div class="col-50">
+                <h3>Week9 Bootstrap控制桿小考</h3>
+            </div>
+            <form action="./Week9_quiz_20211123/1.php">
+                <div class="col-50">
+                    <input type="submit" value="查看控制桿">
+                </div>
+            </form>
+        </div>
+
     </div>
 </body>
 
