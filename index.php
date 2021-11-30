@@ -121,6 +121,17 @@
             </form>
         </div>
 
+        <div class="row">
+            <div class="col-50">
+                <h3>Week10 PHP檔案上傳與Bootstrap相簿</h3>
+            </div>
+            <form action="./Week10_FileUpload_and_ImageRWD/imageUploader.php">
+                <div class="col-50">
+                    <input type="submit" value="上傳圖片Go~">
+                </div>
+            </form>
+        </div>
+
     </div>
 </body>
 
