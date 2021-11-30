@@ -3,6 +3,15 @@
     padding: 0
 }
 
+body {
+    overflow-x: hidden;
+    background: #000000
+}
+
+#bg-div {
+    margin: 0;
+}
+
 #border-btm {
     padding-bottom: 20px;
     margin-bottom: 0px;
