@@ -1,3 +1,23 @@
+<?php
+$target_dir = "./img/";
+$target_file = $target_dir . basename($_FILES["uploadImage"]["name"]);
+$uploadOK = 1;
+$imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
+
+// Check if image file is a actual image or fake image
+if (isset($_POST["imgSubmit"])) {
+    $check = getimagesize($_FILES["uploadImage"]["tmp_name"]);
+    if ($check !== false) {
+        echo "File is an image~ " . $check["mime"] . ".";
+        $uploadOK = 1;
+    } else {
+        echo "File is not an image.";
+        $uploadOk = 0;
+    }
+}
+
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -69,16 +89,16 @@
                                         <div class="col-11">
                                             <div class="form-card">
                                                 <h3 class="mt-0 mb-4 text-center">選擇想要上傳的檔案</h3>
-                                                <form onsubmit="event.preventDefault()">
+                                                <form enctype="multipart/form-data" method="post" action="./imageUploader.php">
                                                     <div class="row">
                                                         <div class="col-12">
                                                             <!-- <input id="uploadImage" name="uploadImage" type="file" class="file"accept=".jpg,.jpeg,.png,.bmp,.gif,.jfif" data-browse-on-zone-click="true"> -->
                                                             <!-- https://stackoverflow.com/questions/4328947/limit-file-format-when-using-input-type-file -->
-                                                            <input id="uploadImage" name="uploadImage" type="file" class="file"accept="image/*" data-browse-on-zone-click="true">
+                                                            <input id="uploadImage" name="uploadImage" type="file" class="file" accept="image/*" data-browse-on-zone-click="true">
                                                         </div>
                                                     </div>
                                                     <div class="row">
-                                                        <div class="col-md-12"> <input type="submit" value="Upload Image" class="btn btn-success placeicon"> </div>
+                                                        <div class="col-md-12"> <input type="submit" value="Upload Image" class="btn btn-success placeicon" name="imgSubmit"> </div>
                                                     </div>
                                                     <div class="row">
                                                         <div class="col-md-12">
