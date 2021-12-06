@@ -16,6 +16,29 @@ if (isset($_POST["imgSubmit"])) {
     }
 }
 
+// Check if file already exists
+if (file_exists($target_file)) {
+    echo "Sorry, file already exist >_<";
+    $uploadOK = 0;
+}
+
+// Check file size
+if ($_FILES["uploadImage"]["size"] > 6969000) {
+    echo "Sorry, your file is too large.";
+    $uploadOK = 0;
+}
+
+// Allow certain file formats
+if (
+    $imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
+    && $imageFileType != "gif"
+) {
+    echo "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
+    $uploadOk = 0;
+}
+
+
+
 ?>
 
 <!DOCTYPE html>
