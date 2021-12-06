@@ -68,27 +68,21 @@
                                     <div class="row justify-content-center">
                                         <div class="col-11">
                                             <div class="form-card">
-                                                <h3 class="mt-0 mb-4 text-center">Enter your card details to pay</h3>
+                                                <h3 class="mt-0 mb-4 text-center">選擇想要上傳的檔案</h3>
                                                 <form onsubmit="event.preventDefault()">
                                                     <div class="row">
                                                         <div class="col-12">
-                                                            <div class="input-group"> <input type="text" id="cr_no" placeholder="0000 0000 0000 0000" minlength="19" maxlength="19"> <label>CARD NUMBER</label> </div>
+                                                            <!-- <input id="uploadImage" name="uploadImage" type="file" class="file"accept=".jpg,.jpeg,.png,.bmp,.gif,.jfif" data-browse-on-zone-click="true"> -->
+                                                            <!-- https://stackoverflow.com/questions/4328947/limit-file-format-when-using-input-type-file -->
+                                                            <input id="uploadImage" name="uploadImage" type="file" class="file"accept="image/*" data-browse-on-zone-click="true">
                                                         </div>
                                                     </div>
                                                     <div class="row">
-                                                        <div class="col-6">
-                                                            <div class="input-group"> <input type="text" name="exp" id="exp" placeholder="MM/YY" minlength="5" maxlength="5"> <label>CARD EXPIRY</label> </div>
-                                                        </div>
-                                                        <div class="col-6">
-                                                            <div class="input-group"> <input type="password" name="cvcpwd" placeholder="&#9679;&#9679;&#9679;" class="placeicon" minlength="3" maxlength="3"> <label>CVV</label> </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-md-12"> <input type="submit" value="Pay $ 100" class="btn btn-success placeicon"> </div>
+                                                        <div class="col-md-12"> <input type="submit" value="Upload Image" class="btn btn-success placeicon"> </div>
                                                     </div>
                                                     <div class="row">
                                                         <div class="col-md-12">
-                                                            <p class="text-center mb-5" id="below-btn"><a href="#">Use a test card</a></p>
+                                                            <p class="text-center mb-5" id="below-btn"><a href="#">Auto upload a test image</a></p>
                                                         </div>
                                                     </div>
                                                 </form>
