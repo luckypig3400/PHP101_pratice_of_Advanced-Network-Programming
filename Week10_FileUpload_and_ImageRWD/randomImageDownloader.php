@@ -1,13 +1,12 @@
 <?php
 //https://picsum.photos/
-$url = "https://picsum.photos/600";
+$url = "https://picsum.photos/369";
 $img = "./img/" . generateRandomString() . ".png";
 
 // https://stackoverflow.com/questions/724391/saving-image-from-php-url
 file_put_contents($img, file_get_contents($url));
 
 header("Location:./imageUploader.php");
-
 
 
 // https://stackoverflow.com/questions/4356289/php-random-string-generator
@@ -34,6 +33,7 @@ function generateRandomString($length = 10)
 </head>
 
 <body>
+    <h1>Downloading... Please wait for a moment~</h1>
 </body>
 
 </html>

@@ -177,7 +177,7 @@ if (isset($_FILES["uploadImage"]["name"]) && $_FILES["uploadImage"]["name"] != "
                                                     </div>
                                                     <div class="row">
                                                         <div class="col-md-12">
-                                                            <p class="text-center mb-5" id="below-btn"><a href="./imageUploader.php">Auto upload a random image</a></p>
+                                                            <p class="text-center mb-5" id="below-btn"><a href="./randomImageDownloader.php">Auto upload a random image</a></p>
                                                         </div>
                                                     </div>
                                                 </form>
