@@ -137,8 +137,19 @@ if (isset($_FILES["uploadImage"]["name"]) && $_FILES["uploadImage"]["name"] != "
                                                 if ($imgFolder = opendir("./img")) {
 
                                                     while (false !== ($fileInFolder = readdir($imgFolder))) {
-                                                        if ($fileInFolder != "." && $fileInFolder != "..")
-                                                            echo '<img src="./img/' . $fileInFolder . '" width="100%">';
+                                                        if ($fileInFolder != "." && $fileInFolder != "..") {
+                                                            $imagePath = "./img/" . $fileInFolder;
+
+                                                            // 取得圖片寬與高
+                                                            // https://stackoverflow.com/questions/2179100/get-image-height-and-width-as-integer-values
+                                                            list($imgWidth, $imgHeight) = getimagesize($imagePath);
+
+                                                            if ($imgWidth >= 1000) { //判斷圖片是否超過1000pixels
+                                                                echo '<img src="' . $imagePath . '" width="50%">';
+                                                            } else {
+                                                                echo '<img src="' . $imagePath . '" width="100%">';
+                                                            }
+                                                        }
                                                     }
 
                                                     closedir($imgFolder);
