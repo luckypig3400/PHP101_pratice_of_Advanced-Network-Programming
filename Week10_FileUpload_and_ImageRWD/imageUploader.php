@@ -81,7 +81,7 @@ if (isset($_FILES["uploadImage"]["name"]) && $_FILES["uploadImage"]["name"] != "
 <body>
     <div class="container-fluid px-0" id="bg-div">
         <div class="row justify-content-center">
-            <div class="col-lg-9 col-12">
+            <div class="col-lg-11 col-12">
                 <div class="card card0">
                     <div class="d-flex" id="wrapper">
                         <!-- Sidebar -->
@@ -147,7 +147,7 @@ if (isset($_FILES["uploadImage"]["name"]) && $_FILES["uploadImage"]["name"] != "
                                                             if ($imgWidth >= 1000) { //判斷圖片是否超過1000pixels
                                                                 echo '<img src="' . $imagePath . '" width="50%">';
                                                             } else {
-                                                                echo '<img src="' . $imagePath . '" width="100%">';
+                                                                echo '<img src="' . $imagePath . '" width="auto">';
                                                             }
                                                         }
                                                     }
@@ -177,7 +177,7 @@ if (isset($_FILES["uploadImage"]["name"]) && $_FILES["uploadImage"]["name"] != "
                                                     </div>
                                                     <div class="row">
                                                         <div class="col-md-12">
-                                                            <p class="text-center mb-5" id="below-btn"><a href="#">Auto upload a test image</a></p>
+                                                            <p class="text-center mb-5" id="below-btn"><a href="./imageUploader.php">Auto upload a random image</a></p>
                                                         </div>
                                                     </div>
                                                 </form>
