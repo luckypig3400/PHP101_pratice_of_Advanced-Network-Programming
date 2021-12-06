@@ -43,7 +43,7 @@ if (isset($_FILES["uploadImage"]["name"]) && $_FILES["uploadImage"]["name"] != "
 
     // Check if $uploadOk is set to 0 by an error
     if ($uploadOK == 0) {
-        echo "Sorry, your file was not uploaded OAO";
+        $errorMsg = $errorMsg . "Sorry, your file was not uploaded OAO\t";
     } else { // if everything is ok, try to upload file
         if (move_uploaded_file($_FILES["uploadImage"]["tmp_name"], $target_file)) {
             // echo '<script>alert("The file "' . htmlspecialchars(basename($_FILES["uploadImage"]["name"])) . 'has been uploaded.");</script>';
@@ -130,7 +130,20 @@ if (isset($_FILES["uploadImage"]["name"]) && $_FILES["uploadImage"]["name"] != "
                                         <div class="col-11">
                                             <h3 class="mt-0 mb-4 text-center">瀏覽已上傳相片</h3>
                                             <div class="row justify-content-center">
-                                                <div id="qr"> <img src="https://i.imgur.com/DD4Npfw.jpg" width="200px" height="200px"> </div>
+                                                <?php
+
+                                                //loading all images in img/ folder
+                                                //https://stackoverflow.com/questions/15774669/list-all-files-in-one-directory-php
+                                                if ($imgFolder = opendir("./img")) {
+
+                                                    while (false !== ($fileInFolder = readdir($imgFolder))) {
+                                                        if ($fileInFolder != "." && $fileInFolder != "..")
+                                                            echo '<img src="./img/' . $fileInFolder . '" width="100%">';
+                                                    }
+
+                                                    closedir($imgFolder);
+                                                }
+                                                ?>
                                             </div>
                                         </div>
                                     </div>
