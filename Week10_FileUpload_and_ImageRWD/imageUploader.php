@@ -37,7 +37,16 @@ if (
     $uploadOk = 0;
 }
 
-
+// Check if $uploadOk is set to 0 by an error
+if ($uploadOK == 0) {
+    echo "Sorry, your file was not uploaded OAO";
+} else { // if everything is ok, try to upload file
+    if (move_uploaded_file($_FILES["uploadImage"]["tmp_name"], $target_file)) {
+        echo "<br>The file " . htmlspecialchars(basename($_FILES["uploadImage"]["name"])) . " has been uploaded.";
+    } else {
+        echo "Sorry, there was an error while uploading your file.";
+    }
+}
 
 ?>
 
