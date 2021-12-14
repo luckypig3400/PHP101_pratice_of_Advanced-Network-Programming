@@ -31,6 +31,12 @@ fclose($AQIjsonFile);
             <h1>空氣品質AQI與PM2.5統計表格</h1>
         </div>
 
+        <div class="row">
+            <form action="./curl_crawler.php">
+                <input type="submit" value="使用Curl抓取資料"><br><br><br>
+            </form>
+        </div>
+
         <div class="table-rwd">
             <table>
                 <thead>
