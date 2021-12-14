@@ -50,6 +50,18 @@
                 </thead>
                 <tbody>
                     <?php
+                    $jsonFile = "./test.json";
+                    $jsonData = file_get_contents($jsonFile);
+
+                    // https://www.w3schools.com/Php/func_json_decode.asp
+                    $arr = json_decode($jsonData, true);
+
+                    echo sizeof($arr["records"]) . '<br>' . sizeof($arr);
+                    for ($i = 0; $i < sizeof($arr["records"]); $i++) {
+                    }
+                    echo $arr["records"][1]["SiteName"];
+                    // print_r($arr);
+
                     echo "<tr><td></td></tr>";
                     ?>
                     <!-- Table row example
