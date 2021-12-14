@@ -56,20 +56,40 @@
                     // https://www.w3schools.com/Php/func_json_decode.asp
                     $arr = json_decode($jsonData, true);
 
-                    echo sizeof($arr["records"]) . '<br>' . sizeof($arr);
+                    // echo sizeof($arr["records"]) . '<br>' . sizeof($arr);
+
                     for ($i = 0; $i < sizeof($arr["records"]); $i++) {
+                        echo "<tr>";
+                        echo "<td>" . $arr["records"][$i]["SiteName"] . "</td>";
+                        echo "<td>" . $arr["records"][$i]["County"] . "</td>";
+                        echo "<td>" . $arr["records"][$i]["AQI"] . "</td>";
+                        echo "<td>" . $arr["records"][$i]["Pollutant"] . "</td>";
+                        echo "<td>" . $arr["records"][$i]["Status"] . "</td>";
+                        echo "<td>" . $arr["records"][$i]["SO2"] . "</td>";
+                        echo "<td>" . $arr["records"][$i]["CO"] . "</td>";
+                        echo "<td>" . $arr["records"][$i]["CO_8hr"] . "</td>";
+                        echo "<td>" . $arr["records"][$i]["O3"] . "</td>";
+                        echo "<td>" . $arr["records"][$i]["O3_8hr"] . "</td>";
+                        echo "<td>" . $arr["records"][$i]["PM10"] . "</td>";
+                        echo "<td>" . $arr["records"][$i]["PM2.5"] . "</td>";
+                        echo "<td>" . $arr["records"][$i]["NO2"] . "</td>";
+                        echo "<td>" . $arr["records"][$i]["NOx"] . "</td>";
+                        echo "<td>" . $arr["records"][$i]["NO"] . "</td>";
+                        echo "<td>" . $arr["records"][$i]["WindSpeed"] . "</td>";
+                        echo "<td>" . $arr["records"][$i]["WindDirec"] . "</td>";
+                        echo "<td>" . $arr["records"][$i]["PublishTime"] . "</td>";
+                        echo "<td>" . $arr["records"][$i]["PM2.5_AVG"] . "</td>";
+                        echo "<td>" . $arr["records"][$i]["PM10_AVG"] . "</td>";
+                        echo "<td>" . $arr["records"][$i]["SO2_AVG"] . "</td>";
+                        echo "<td>" . $arr["records"][$i]["Longitude"] . "</td>";
+                        echo "<td>" . $arr["records"][$i]["Latitude"] . "</td>";
+                        echo "<td>" . $arr["records"][$i]["SiteId"] . "</td>";
+                        echo "<td>" . $arr["records"][$i]["ImportDate"] . "</td>";
+                        echo "</tr>";
                     }
-                    echo $arr["records"][1]["SiteName"];
                     // print_r($arr);
 
-                    echo "<tr><td></td></tr>";
                     ?>
-                    <!-- Table row example
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr> -->
 
                 </tbody>
             </table>
