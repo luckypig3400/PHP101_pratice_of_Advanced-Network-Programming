@@ -14,14 +14,31 @@
 <?php
 $dataURL = "https://data.epa.gov.tw/api/v1/aqx_p_432?limit=1000&api_key=9be7b239-557b-4c10-9775-78cadfc555e9&sort=ImportDate%20desc&format=json";
 
-$downloadedJson = file_get_contents($dataURL);
-// https://stackoverflow.com/questions/3062324/what-is-curl-in-php
-// echo $downloadedJson;
+/* 
+Get filetime latest modify time: https://www.php.net/manual/en/function.filemtime.php
+Get time(): https://www.w3schools.com/php/func_date_time.asp
+echo filemtime("./AQI_tw.json") . "<br>";
+$ct = time(); // ct:current time
+echo $ct . "<br>";
+echo (date("Y-m-d H:i:s", $ct)) . "<br>";
+*/
+$ct = time(); // ct:current time
+$ft = filemtime("./AQI_tw.json"); // ft: file time
+if ($ct - $ft > 360) {
+    $downloadedJson = file_get_contents($dataURL);
+    // https://stackoverflow.com/questions/3062324/what-is-curl-in-php
+    // echo $downloadedJson;
 
-$AQIjsonFile = fopen("./AQI_tw.json", "w") or die("無法存取檔案");
-// https://www.w3schools.com/php/php_file_create.asp
-fwrite($AQIjsonFile, $downloadedJson);
-fclose($AQIjsonFile);
+    $AQIjsonFile = fopen("./AQI_tw.json", "w") or die("無法存取檔案");
+    // https://www.w3schools.com/php/php_file_create.asp
+    fwrite($AQIjsonFile, $downloadedJson);
+    fclose($AQIjsonFile);
+}
+else{
+    // 繼續使用本地檔案，不重新抓取資料
+}
+
+echo "本資料最後更新時間:" . date("Y-m-d H:i:s" , $ft) . "(每6分鐘更新一次)";
 
 ?>
 
@@ -33,7 +50,7 @@ fclose($AQIjsonFile);
 
         <div class="row">
             <form action="./curl_crawler.php">
-                <input type="submit" value="使用Curl抓取資料"><br><br><br>
+                <input type="submit" value="使用Curl立即抓取最新資料"><br><br><br>
             </form>
         </div>
 
