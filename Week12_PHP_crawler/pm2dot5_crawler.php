@@ -11,6 +11,20 @@
     <link rel="stylesheet" href="../general_style.css">
 </head>
 
+<?php
+$dataURL = "https://data.epa.gov.tw/api/v1/aqx_p_432?limit=1000&api_key=9be7b239-557b-4c10-9775-78cadfc555e9&sort=ImportDate%20desc&format=json";
+
+$downloadedJson = file_get_contents($dataURL);
+// https://stackoverflow.com/questions/3062324/what-is-curl-in-php
+// echo $downloadedJson;
+
+$AQIjsonFile = fopen("./AQI_tw.json", "w") or die("無法存取檔案");
+// https://www.w3schools.com/php/php_file_create.asp
+fwrite($AQIjsonFile, $downloadedJson);
+fclose($AQIjsonFile);
+
+?>
+
 <body>
     <div class="container" style="text-align: center;">
         <div class="row">
@@ -50,7 +64,7 @@
                 </thead>
                 <tbody>
                     <?php
-                    $jsonFile = "./test.json";
+                    $jsonFile = "./AQI_tw.json";
                     $jsonData = file_get_contents($jsonFile);
 
                     // https://www.w3schools.com/Php/func_json_decode.asp
