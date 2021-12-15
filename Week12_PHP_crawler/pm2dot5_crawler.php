@@ -33,12 +33,12 @@ if ($ct - $ft > 360) {
     // https://www.w3schools.com/php/php_file_create.asp
     fwrite($AQIjsonFile, $downloadedJson);
     fclose($AQIjsonFile);
-}
-else{
+} else {
     // 繼續使用本地檔案，不重新抓取資料
 }
 
-echo "本資料最後更新時間:" . date("Y-m-d H:i:s" , $ft) . "(每6分鐘更新一次)";
+$ft = filemtime("./AQI_tw.json"); // refetch filetime if updated
+echo "本資料最後更新時間:" . date("Y-m-d H:i:s", $ft) . "(每6分鐘更新一次)";
 
 ?>
 
@@ -97,7 +97,13 @@ echo "本資料最後更新時間:" . date("Y-m-d H:i:s" , $ft) . "(每6分鐘�
 
                     for ($i = 0; $i < sizeof($arr["records"]); $i++) {
                         echo "<tr>";
-                        echo "<td>" . $arr["records"][$i]["SiteName"] . "</td>";
+
+                        // https://stackoverflow.com/a/1801800/16055146
+                        // https://stackoverflow.com/a/52943975/16055146
+                        $siteLocationMapLink = "https://www.google.com/maps/search/?api=1&query=";
+                        $siteLocationMapLink = $siteLocationMapLink . $arr["records"][$i]["Latitude"] . "," . $arr["records"][$i]["Longitude"];
+                        echo '<td><a href="' . $siteLocationMapLink . '" target="_blank">' . $arr["records"][$i]["SiteName"] . "</a></td>";
+
                         echo "<td>" . $arr["records"][$i]["County"] . "</td>";
                         echo "<td>" . $arr["records"][$i]["AQI"] . "</td>";
                         echo "<td>" . $arr["records"][$i]["Pollutant"] . "</td>";
