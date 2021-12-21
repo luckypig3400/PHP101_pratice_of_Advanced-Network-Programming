@@ -25,11 +25,17 @@ $database = "w13";			/*資料庫名稱*/
 		$user = $_POST["username"];
 		$pwd  = $_POST["password"];
 
+		// 在'\"等特殊字元前加上反斜線以防止SQL Injection
+		$user = addslashes($user);
+		$pwd = addslashes($pwd);
+		// 在加上面兩行前，可以' or 1=1 -- 進行攻擊(包含空白)
+
 		// 建立與MySQL資料庫的連線
 		$link = new PDO('mysql:host=' . $hostname . ';dbname=' . $database . ';charset=utf8', $username, $password);
 
 		// 用SQL語法呼叫mysql_query()
-		$query = "SELECT * FROM `fperson` WHERE `user`='" . $user . "' AND `pwd`='" . $pwd . "'";
+		$query = "SELECT * FROM `person` WHERE `user`='" . $user . "' AND `pwd`='" . $pwd . "'";
+		// echo $query . "<br>";
 		$result = $link->query($query);
 
 		// 找到符合的資料
