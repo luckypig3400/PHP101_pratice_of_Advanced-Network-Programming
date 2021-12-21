@@ -58,8 +58,8 @@ echo "本資料最後更新時間:" . date("Y-m-d H:i:s", $ft) . "(每6分鐘更
             <table>
                 <thead>
                     <tr>
-                        <th>測站名稱SiteName</th>
                         <th>所屬縣市County</th>
+                        <th>測站名稱SiteName</th>
                         <th>空氣品質AQI</th>
                         <th>Pollutant</th>
                         <th>評測狀態Status</th>
@@ -97,6 +97,7 @@ echo "本資料最後更新時間:" . date("Y-m-d H:i:s", $ft) . "(每6分鐘更
 
                     for ($i = 0; $i < sizeof($arr["records"]); $i++) {
                         echo "<tr>";
+                        echo "<td>" . $arr["records"][$i]["County"] . "</td>";
 
                         // https://stackoverflow.com/a/1801800/16055146
                         // https://stackoverflow.com/a/52943975/16055146
@@ -104,7 +105,6 @@ echo "本資料最後更新時間:" . date("Y-m-d H:i:s", $ft) . "(每6分鐘更
                         $siteLocationMapLink = $siteLocationMapLink . $arr["records"][$i]["Latitude"] . "," . $arr["records"][$i]["Longitude"];
                         echo '<td><a href="' . $siteLocationMapLink . '" target="_blank">' . $arr["records"][$i]["SiteName"] . "</a></td>";
 
-                        echo "<td>" . $arr["records"][$i]["County"] . "</td>";
                         echo "<td>" . $arr["records"][$i]["AQI"] . "</td>";
                         echo "<td>" . $arr["records"][$i]["Pollutant"] . "</td>";
                         echo "<td>" . $arr["records"][$i]["Status"] . "</td>";
