@@ -1,0 +1,138 @@
+BODY {
+  FONT-SIZE: 12pt; FONT-FAMILY: Arial
+}
+TD {
+  FONT-SIZE: 12pt; FONT-FAMILY: Arial;
+}
+INPUT {
+  FONT-SIZE: 12pt;
+}
+
+OPTION {
+  FONT-SIZE: 12pt;
+}
+radio {
+  FONT-SIZE: 12pt;
+}
+check {
+  FONT-SIZE: 12pt;
+}
+SELECT {
+  FONT-SIZE: 12pt;
+}
+TEXTAREA {
+  FONT-SIZE: 12pt;
+}
+tr{
+}
+
+.body_main{
+  background-color: #FFFFFF;
+  color: #000000;
+  margin-top:0px;
+  margin-bottom:0px;
+  margin-left:0px;
+  margin-right:0px;
+}
+.table_in{
+  border:0px;
+  background-color:#004779;
+}
+
+.tr_data{
+  background-color: #ffffff
+}
+.tr_data_2{
+  background-color: #FFFEE9
+}
+.tr_title{
+  height:35;
+  color:#3B6018;
+}
+.tdHeads {
+  /*td中的靠右對齊 標題*/
+  FONT-SIZE: 12pt;
+  BACKGROUND: #fffee9;
+  color:#4c4c4c;
+  TEXT-ALIGN: right;
+}
+.tdHeads2 {
+  /*td中的靠左對齊 使用者資料*/
+  FONT-SIZE: 12pt;
+  BACKGROUND: #FFFFFF;
+  color:#0000FF;
+  TEXT-ALIGN: left;
+}
+.tdHeads3 {
+  /*td中的input check靠左對齊*/
+  FONT-SIZE: 12pt;
+  BACKGROUND: #FFFFFF;
+  color:#4c4c4c;
+  TEXT-ALIGN: left;
+}
+.td_title{
+  /*title*/
+  font:bold;
+  background: url(images/table-header.gif);
+  color:#FFFFFF;
+  text-align:center;
+}
+.btns {
+  BORDER-RIGHT: black 1px solid;
+  PADDING-RIGHT: 0px;
+  BORDER-TOP: black 1px solid;
+  PADDING-LEFT: 1px;
+  FONT-WEIGHT: normal;
+  PADDING-BOTTOM: 0px;
+  BORDER-LEFT: black 1px solid;
+  LINE-HEIGHT: normal;
+  PADDING-TOP: 2px;
+  BORDER-BOTTOM: black 1px solid;
+  FONT-STYLE: normal;
+  FONT-VARIANT: normal;
+  BACKGROUND: #e3e3e3
+}
+.inputs {
+  border:#4c4c4c solid 1px;
+  FONT-WEIGHT: normal;
+  LINE-HEIGHT: normal;
+  FONT-STYLE: normal;
+  FONT-VARIANT: normal
+}
+.msg{
+  background:#FFFFFF;
+}
+
+.btnsPage1 {
+	BORDER-RIGHT: black 1px solid; 
+	PADDING-RIGHT: 0px; 
+	BORDER-TOP: black 1px solid; 
+	PADDING-LEFT: 1px; 
+	FONT-WEIGHT: normal;  
+	PADDING-BOTTOM: 0px; 
+	BORDER-LEFT: black 1px solid; 
+	LINE-HEIGHT: normal; 
+	PADDING-TOP: 2px; 
+	BORDER-BOTTOM: white 1px solid; 
+	FONT-STYLE: normal; 
+	FONT-VARIANT: normal;
+	BACKGROUND: #f6f6f6;
+	FONT-SIZE: 10pt;
+}
+
+.btnsPage2 {
+	BORDER-RIGHT: black 1px solid; 
+	PADDING-RIGHT: 0px; 
+	BORDER-TOP: black 1px solid; 
+	PADDING-LEFT: 1px; 
+	FONT-WEIGHT: normal;  
+	PADDING-BOTTOM: 0px; 
+	BORDER-LEFT: black 1px solid; 
+	LINE-HEIGHT: normal; 
+	PADDING-TOP: 2px; 
+	BORDER-BOTTOM: white 1px solid; 
+	FONT-STYLE: normal; 
+	FONT-VARIANT: normal;
+	BACKGROUND: #8BCAE9;
+	FONT-SIZE: 10pt;
+}

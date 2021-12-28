@@ -1,0 +1,14 @@
+document.write("<table width='100%' border='0' cellspacing='0' cellpadding='0'>");
+document.write("  <tr> ");
+document.write("    <td><img src='images/_spacer.gif' width='28' height='21'></td>");
+document.write("  </tr>");
+document.write("  <tr> ");
+document.write("    <td><span id='span_banner1'></td>");
+document.write("  </tr>");
+document.write("  <tr> ");
+document.write("    <td><img src='images/_spacer.gif' width='28' height='13'></td>");
+document.write("  </tr>");
+document.write("  <tr>");
+document.write("    <td><span id='span_banner2'></span></td>");
+document.write("  </tr>");
+document.write("</table>");

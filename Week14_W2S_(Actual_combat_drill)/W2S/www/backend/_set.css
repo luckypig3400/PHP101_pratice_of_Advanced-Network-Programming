@@ -1,0 +1,15 @@
+.set-bgbottom {  background-repeat: no-repeat; background-position: bottom}
+.set-bgtop {  background-repeat: repeat-x; background-position: top}
+
+a:hover { text-decoration: underline } 
+a:link { text-decoration: none } 
+a:visited { text-decoration: none } 
+.leftlink { color: #006699}
+.leftlink:hover { color: #006699; text-decoration: underline}
+
+.font-12{ font-size: 12pt} 
+.font-11{ font-size: 11pt} 
+.font-10{ font-size: 10pt} 
+.font-9 { font-size: 9pt} 
+.font-8 { font-size: 8pt} 
+.font-7 { font-size: 7pt} 
