@@ -43,23 +43,24 @@
 		DisconnectMysql($l_type,$conn);	
 		header("Location: /");
 	}
-		
-	$sql =" select count(*) from user_info";
+
+	$sql =" select passwd from user_info";
 	$sql.=" where id='$id'";
-	$sql.=" and passwd='$passwd'";
-	
-	if(TestDuplicate($conn,$sql))
+	$result = $conn->query($sql);
+	$pwdverify = $result->fetch();
+
+	if(true == password_verify($passwd, $pwdverify[0]))//驗證密碼
+	// https://www.php.net/manual/en/function.password-verify.php
 	{
 		$sql =" select user_no,`group`,school_no from user_info";
 		$sql.=" where id='$id'";
-		$sql.=" and passwd='$passwd'";
 
 		$result = $conn->query($sql);
 		$data_arr=$result->fetch();
 		
 		setcookie("ck_user_no",$data_arr[0],time()+86400,"/");
 		setcookie("ck_group",$data_arr[1],time()+86400,"/");
-		if ($data_arr[1]=="2")
+		if (password_verify($passwd, $data_arr[1]) == true)
 		{
 			setcookie("ck_school_no",$data_arr[2],time()+86400,"/");
 		}
@@ -89,7 +90,8 @@
 		
 		$idx=0;
 		$msg="使用者不存在或密碼錯誤";
-	}	
+	}
+	
 //--------------------------------------
 //disconnect database
 //--------------------------------------	

@@ -199,7 +199,7 @@ function chk_school()
                     <tr>
                       <td class="tdHeads" width="150"><font color='red'>＊</font>密碼：</td>
                       <td class="tdHeads2">
-                      <input type="input" name="passwd" size="20" class="inputs" readonly>
+                      <input type="input" name="passwd" size="20" class="inputs">
                       <input class="btns" type="button" value="*" onClick="chk_pwd()">
                       </td>
                     </tr> 

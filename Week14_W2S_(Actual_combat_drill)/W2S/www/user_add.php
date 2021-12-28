@@ -63,13 +63,16 @@
 	$sql =" select count(*) from user_info";
 	$sql.=" where id='$id'";
 	
+  $hashedPWD = password_hash($passwd, PASSWORD_DEFAULT);
+  // https://www.php.net/manual/en/function.password-hash.php
+
 	if(!TestDuplicate($conn,$sql))
 	{	
 		//--------------------------------------		
 		$sql =" insert into user_info values(";
 		$sql.=" $user_no,";
 		$sql.=" '$id',";
-		$sql.=" '$passwd',";
+		$sql.=" '$hashedPWD',";
 		$sql.=" '$name',";				
 		$sql.=" '$group',";
 		$sql.=" '$school_no',";
