@@ -580,7 +580,7 @@ INSERT INTO `seed_pic` (`seed_no`, `pic_no`) VALUES
 CREATE TABLE IF NOT EXISTS `user_info` (
   `user_no` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '使用者編號',
   `id` varchar(20) NOT NULL COMMENT '帳號',
-  `passwd` varchar(20) NOT NULL COMMENT '密碼',
+  `passwd` varbinary(256) NOT NULL COMMENT '密碼',
   `name` varchar(100) NOT NULL COMMENT '姓名',
   `group` char(1) NOT NULL COMMENT '群組',
   `school_no` varchar(10) DEFAULT NULL COMMENT '學校代碼',
