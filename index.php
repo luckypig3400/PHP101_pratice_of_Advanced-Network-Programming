@@ -154,6 +154,17 @@
             </form>
         </div>
 
+        <div class="row">
+            <div class="col-50">
+                <h3>Week14 實戰演練 改寫舊系統部分功能</h3>
+            </div>
+            <form action="./Week14_W2S_(Actual_combat_drill)/W2S/www/">
+                <div class="col-50">
+                    <input type="submit" value="前往系統">
+                </div>
+            </form>
+        </div>
+
     </div>
 </body>
 
