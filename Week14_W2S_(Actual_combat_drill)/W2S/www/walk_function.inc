@@ -49,7 +49,7 @@ function ConnectMysql($p_type)
 {	
 	if ($p_type==TRUE)
 	{
-		$connection = new PDO('mysql:host=localhost;dbname=walktoschool;charset=utf8', 'root', 'root');
+		$connection = new PDO('mysql:host=localhost;dbname=walktoschool;charset=utf8', 'root');
 		return $connection;
 	}
 }
