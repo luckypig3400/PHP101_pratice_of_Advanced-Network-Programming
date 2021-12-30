@@ -19,12 +19,6 @@ document.write(' \
                       <td height="23"><img src="images/_arrow01.gif" width="11" height="9" align="absmiddle"><a href="qa_list.php" class="leftlink">Q&A管理</a></td> \
                     </tr> \
                     <tr> \
-                      <td height="23"><img src="images/_arrow01.gif" width="11" height="9" align="absmiddle"><a href="comment_list.php" class="leftlink">輔導評核管理</a></td> \
-                    </tr> \
-                    <tr> \
-                      <td height="23"><img src="images/_arrow01.gif" width="11" height="9" align="absmiddle"><a href="apply_list.php" class="leftlink">報名學校管理</a></td> \
-                    </tr> \
-                    <tr> \
                       <td height="23"><img src="images/_arrow01.gif" width="11" height="9" align="absmiddle"><a href="export_info.php" class="leftlink">資料管理</a></td> \
                     </tr> \
                   </table> \
