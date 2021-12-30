@@ -42,9 +42,9 @@ if ($ck_user_no == "" || $ck_group != "1") {
     header("Location: backend/");
 }
 //--------------------------------------	
-$sql = " select a.news_no,a.issue_date,a.type,a.subject";
+$sql = " select *";
 $sql .= " from news_info a";
-$sql .= " where 1>0";
+$sql .= " ";
 if ($type != "0") {
     $sql .= " and a.type='$type'";
 }
@@ -146,15 +146,17 @@ DisconnectMysql($l_type, $conn);
                                                                         <table class="table_in" width="620" border="0" cellspacing="1" cellpadding="3">
                                                                             <tr class="tr_title">
                                                                                 <td class="td_title" width="50">序號</td>
-                                                                                <td class="td_title" width="150">消息類別</td>
+                                                                                <td class="td_title" width="90">消息類別</td>
                                                                                 <td class="td_title" width="120">發表日期</td>
-                                                                                <td class="td_title" width="300">消息標題</td>
+                                                                                <td class="td_title" width="150">消息標題</td>
+                                                                                <td class="td_title" width="180">部分內容</td>
                                                                             </tr>
                                                                             <!-- List Header E-->
                                                                             <!-- List records S-->
                                                                             <?php
                                                                             for ($i = 0; $i < $row_count; $i++) {
                                                                                 $data_arr = $result->fetch();
+                                                                                // print_r($data_arr);
                                                                             ?>
                                                                                 <?php
                                                                                 if ($i % 2 == 1) {
@@ -168,9 +170,10 @@ DisconnectMysql($l_type, $conn);
                                                                                 }
                                                                                     ?>
                                                                                     <td align="center" width="50"><?php echo ($i + 1) ?></td>
-                                                                                    <td align="center" width="150"><?php echo $type_name[$data_arr[2]] ?></td>
+                                                                                    <td align="center" width="90"><?php echo $type_name[$data_arr[2]] ?></td>
                                                                                     <td align="center" width="120"><?php echo $data_arr[1] ?></td>
-                                                                                    <td align="left" width="300"><a href="news_info.php?news_no=<?php echo $data_arr[0] ?>"><?php echo $data_arr[3] ?></a></td>
+                                                                                    <td align="left" width="150"><a href="news_info.php?news_no=<?php echo $data_arr[0] ?>"><?php echo $data_arr[3] ?></a></td>
+                                                                                    <td align="left" width="180"><?php echo $data_arr['content'] ?></td>
                                                                                     </tr>
                                                                                 <?php
                                                                             }
