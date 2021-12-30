@@ -13,6 +13,9 @@ document.write(' \
                       <td height="23"><img src="images/_arrow01.gif" width="11" height="9" align="absmiddle"><a href="" class="leftlink">消息管理</a></td> \
                     </tr> \
                     <tr> \
+                      <td height="23"><img src="images/_arrow01.gif" width="11" height="9" align="absmiddle"><a href="search.php" class="leftlink">搜尋消息</a></td> \
+                    </tr> \
+                    <tr> \
                       <td height="23"><img src="images/_arrow01.gif" width="11" height="9" align="absmiddle"><a href="user_list.php" class="leftlink">帳號管理</a></td> \
                     </tr> \
                     <tr> \
