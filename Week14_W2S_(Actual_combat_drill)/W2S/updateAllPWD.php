@@ -22,17 +22,24 @@ try {
     foreach ($result as $row) {
         echo "編號:" . $row["user_no"] . "的使用者原始密碼為:" . $row["passwd"] . "<br>";
 
+        $hashedPWD = password_hash($row["passwd"], PASSWORD_DEFAULT);
 
-        
+        // https://www.w3schools.com/php/php_mysql_update.asp
+        $updateSQLcommand = "UPDATE user_info SET passwd='$hashedPWD' WHERE user_no=" . $row["user_no"];
+
+        // Prepare statement
+        $stmt = $conn->prepare($updateSQLcommand);
+
+        // execute the query
+        $stmt->execute();
+
+        // echo a message to say the UPDATE succeeded
+        echo $stmt->rowCount() . " records UPDATED successfully~!<br>";
     }
 } catch (PDOException $e) {
     echo "Error: " . $e->getMessage();
 }
 $conn = null;
-
-echo "admin:" . password_hash("admin", PASSWORD_DEFAULT) . "<br>";
-echo "seed:" . password_hash("seed", PASSWORD_DEFAULT) . "<br>";
-echo "user3:" . password_hash("user3", PASSWORD_DEFAULT) . "<br>";
 
 ?>
 
