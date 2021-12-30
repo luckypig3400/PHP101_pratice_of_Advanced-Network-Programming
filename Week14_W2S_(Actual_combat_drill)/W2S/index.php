@@ -48,4 +48,8 @@ echo "user3:" . password_hash("user3", PASSWORD_DEFAULT) . "<br>";
 
 ?>
 
+<form action="./updateAllPWD.php">
+    <input type="submit" value="更新明文密碼為密文">
+</form>
+
 </html>
