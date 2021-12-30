@@ -24,6 +24,7 @@ if ($l_type && !$conn) {
 $ck_user_no = (isset($_COOKIE['ck_user_no'])) ? $_COOKIE['ck_user_no'] : "";
 $ck_group = (isset($_COOKIE['ck_group'])) ? $_COOKIE['ck_group'] : "";
 $type = (isset($_POST['type'])) ? $_POST['type'] : "0";
+$keyword = isset($_GET['searchKeyword']) ? $_GET['searchKeyword'] : "";
 //--------------------------------------
 //initial Local variables
 //--------------------------------------	
@@ -44,7 +45,10 @@ if ($ck_user_no == "" || $ck_group != "1") {
 //--------------------------------------	
 $sql = " select *";
 $sql .= " from news_info a";
-$sql .= " ";
+$sql .= " where a.subject like '%" . $keyword;
+$sql .= "%' or a.content like '%" . $keyword . "%'";
+// https://www.w3schools.com/sql/sql_like.asp
+
 if ($type != "0") {
     $sql .= " and a.type='$type'";
 }
@@ -84,7 +88,7 @@ DisconnectMysql($l_type, $conn);
 <!-----javascript code E----->
 
 <body class="body_main">
-    <form name="AP_CT" action="news_new.php" method="post">
+    <form name="AP_CT">
         <!-- header start -->
         <script language="javascript" src="walk_header1.js"></script>
         <!-- header end -->
@@ -124,7 +128,7 @@ DisconnectMysql($l_type, $conn);
                                                 <tr>
                                                     <td width="7%">&nbsp;</td>
                                                     <td width="93%"><b>
-                                                            <font color="#FFFFFF">消息管理-最新消息列表</font>
+                                                            <font color="#FFFFFF">搜尋消息</font>
                                                         </b></td>
                                                 </tr>
                                             </table>
@@ -134,6 +138,16 @@ DisconnectMysql($l_type, $conn);
                                     <tr>
                                         <td background="images/block-back.gif">
                                             <table width="703" border="0" cellspacing="0" cellpadding="0">
+                                                <tr>
+                                                    <td align="center"><br>
+                                                        <form action="./search.php" method="get">
+                                                            請輸入搜尋關鍵字:
+                                                            <input type="text" name="searchKeyword">
+                                                            <input type="submit" value="送出查詢">
+                                                        </form>
+                                                    </td>
+                                                </tr>
+
                                                 <tr>
                                                     <td>
                                                         <BR><BR>
