@@ -80,9 +80,10 @@
 		}
 		else
 		{
+      $hashedPWD = password_hash($passwd, PASSWORD_DEFAULT);
 			//--------------------------------------	
 			$sql =" update user_info set";
-			$sql.=" passwd='$passwd',";
+			$sql.=" passwd='$hashedPWD',";
 			$sql.=" name='$name',";
 			$sql.=" tel='$tel',";
 			$sql.=" fax='$fax',";

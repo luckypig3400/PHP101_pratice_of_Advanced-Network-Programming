@@ -217,6 +217,12 @@ function chk_pwd()
                       </td>
                     </tr> 
                     <tr>
+                      <td class="tdHeads" width="150">密碼：</td>
+                      <td class="tdHeads2">
+                      <input type="input" name="passwd" size="20" class="inputs">
+                      </td>
+                    </tr> 
+                    <tr>
                       <td class="tdHeads" width="150">群組：</td>
                       <td class="tdHeads2"><?php echo $group_name[$data_arr[3]]?></td>     
                     </tr>                     
