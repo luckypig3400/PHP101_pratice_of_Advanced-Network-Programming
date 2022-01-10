@@ -165,6 +165,17 @@
             </form>
         </div>
 
+        <div class="row">
+            <div class="col-50">
+                <h3>Week16 架設模板網站並修改內容</h3>
+            </div>
+            <form action="./Week16_selfSite_with_Wordpress/W16notes.php">
+                <div class="col-50">
+                    <input type="submit" value="前往我的筆記">
+                </div>
+            </form>
+        </div>
+
     </div>
 </body>
 
